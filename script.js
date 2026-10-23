@@ -6,75 +6,70 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        enunciado: "Após uma semana muito corrida e exaustiva na escola ou trabalho, você percebe que está física e mentalmente cansado. Qual o seu primeiro pensamento ao chegar no final de semana?",
         alternativas: [
             {
-                texto: "Isso é assustador!",
-                afirmacao: "afirmacao"
+                texto: "Preciso tirar um tempo só para mim, descansar a mente e desconectar do mundo.",
+                afirmacao: "Você entende a importância de desacelerar quando o corpo pede trégua."
             },
             {
-                texto: "Isso é maravilhoso!",
-                afirmacao: "afirmacao"
-            }           
-            
-        ]
-    },
-    {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial (IA), uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre elaIA. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de tecnologia em sala de aula. Qual atitude você toma?",
-        alternativas: [
-            {
-                texto:"Utilizar uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento",
-                afirmacao:"afirmacao"
-            },
-            {
-                texto: "Escrever o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-                afirmacao:"afirmacao"
+                texto: "Vou continuar produzindo e realizando tarefas para não perder tempo.",
+                afirmacao: "Você busca estar sempre em movimento, mas precisa tomar cuidado com o esgotamento."
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Você nota que tem passado muitas horas usando redes sociais antes de dormir, o que tem prejudicado a qualidade do seu sono. Que atitude você decide tomar?",
         alternativas: [
             {
-                texto:"Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-                afirmacao:"afirmacao"
+                texto: "Definir um limite diário de uso das telas e criar uma rotina relaxante de sono.",
+                afirmacao: "Sabe estabelecer limites saudáveis entre o mundo digital e seu bem-estar."
             },
             {
-                texto:"Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao:"afirmacao"
+                texto: "Continuar usando as redes até pegar no sono, mesmo acordando cansado no dia seguinte.",
+                afirmacao: "Ainda encontra dificuldades para priorizar uma higiene do sono adequada."
             }
-            
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Em uma conversa entre amigos sobre saúde e qualidade de vida, surge o tema sobre a prática regular de atividades físicas e alimentação consciente. Qual o seu posicionamento?",
         alternativas: [
             {
-                texto:"Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao:"afirmacao"
+                texto: "Defendo que cuidar do corpo com exercícios e boa alimentação é fundamental para a saúde mental.",
+                afirmacao: "Reconhece que a saúde física e a saúde mental caminham juntas."
             },
             {
-                texto:"Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao:"afirmacao"
+                texto: "Acredito que cuidados com o corpo demandam muito esforço e não são prioridade no momento.",
+                afirmacao: "Prioriza outras áreas da vida no momento, deixando a rotina física em segundo plano."
             }
-            
         ]
     },
     {
-        enunciado: " Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda de uma IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz?",
+        enunciado: "Diante de um momento de estresse intenso ou ansiedade com os compromissos futuros, como você reage?",
         alternativas: [
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao:"afirmacao"
+                texto: "Pratico rotinas de respiração, meditação ou busco conversar com alguém de confiança sobre o que sinto.",
+                afirmacao: "Desenvolveu estratégias eficientes para acolher e gerenciar suas emoções."
             },
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao:"afirmacao"
+                texto: "Tento ignorar o sentimento e guardo tudo para mim, esperando que o estresse passe sozinho.",
+                afirmacao: "Tende a reprimir sentimentos difíceis em vez de processá-los."
             }
-            
-            
         ]
     },
+    {
+        enunciado: "Um colega te convida para assumir uma responsabilidade extra, mas sua agenda já está lotada e você está no limite de sua energia. O que você faz?",
+        alternativas: [
+            {
+                texto: "Digo 'não' de forma respeitosa, priorizando minha saúde mental e meus limites pessoais.",
+                afirmacao: "Aprendeu a prática fundamental de dizer 'não' para proteger sua paz."
+            },
+            {
+                texto: "Aceito o pedido mesmo sabendo que ficarei sobrecarregado, para não chatear a outra pessoa.",
+                afirmacao: "Muitas vezes coloca a expectativa dos outros acima da sua própria saúde mental."
+            }
+        ]
+    }
 ];
 
 let atual = 0; 
@@ -109,9 +104,12 @@ function respostaSelecionada(opcaoSelecionada){
 }
 
 function mostraResultado(){
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Sua Jornada até 2030...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = ""; 
 }
 
 mostraPergunta();
+           
+   
+          
